@@ -1,0 +1,98 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{subfiles}
+\usepackage{import}		%intrinsic LaTeX 
+
+\usepackage[utf8]{inputenc}
+\usepackage{comment}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{lipsum}% dummy text
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{cite}
+\usepackage{graphicx}
+\graphicspath{ {Images/} }
+\usepackage{wrapfig}
+\usepackage[font={small}]{caption}
+\usepackage{framed}
+\usepackage{miller}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	citecolor=blue,
+	linkcolor=blue,
+	filecolor=blue,      
+	urlcolor=blue,
+}
+\usepackage{amssymb}
+
+%\usepackage{preamble}	%a local package of packages used in this document
+\usepackage{xspace} 	%adds a space after shortcut equations
+\usepackage{outlines} 	%creates outlines
+\usepackage{enumitem}	%allows for numbering/listing options for outlines
+\usepackage{amsmath}	%general puprose math package
+\usepackage{mathtools}	%separate math equation generator from amsmath; used to make square brackets under equations
+\usepackage{array} 		%creates tables
+\usepackage{bm}			%allows bolding of equations IN equation environment
+\usepackage{color}		%for making colored text
+\usepackage{caption,subcaption}	
+
+
+%Defines shortcuts for frequently used equations
+\newcommand{\degree}{$^{\circ}$}				%degree symbol for in-text temperature
+\newcommand{\fegacomp}{Fe$_{100-x}$Ga$_{x}$\xspace} %Galfenol percentage composition
+\newcommand{\fealcomp}{Fe$_{100-x}$Al$_{x}$\xspace} %Alfenol percentage composition
+\newcommand{\gamSV}{$\gamma_{SV}$\xspace} 			%solid-vapor interfacial energy
+\newcommand{\gamSL}{$\gamma_{SL}$\xspace}			%solid-liquid interfacial energy
+\newcommand{\gamLV}{$\gamma_{LV}$\xspace}			%liquid-vapor interfacial energy
+\newcommand{\nalk}[1][]{\textit{n}-alkane#1\xspace}	%n-alkane formula
+\newcommand{\ca}[1][]{contact angle#1\xspace}		%contact angle
+\newcommand{\NSF}{National Science Foundation\xspace}
+
+\title{\textbf{Orientation-dependent Surface Energy Characterization of Rare-Earth-Free Magnetostrictive Alloys}}
+\author{\makebox[.9\textwidth]{\textbf{Michael N. Van Order}\thanks{Funded by the NSF}}\\~\\
+	%		Materials Science and Engineering\\
+	%		University of Maryland
+	\and Dr. Alison Flatau\\
+	%		Aerospace Engineering\\
+	%		Univeristy of Maryland
+	\and Dr. Suok-Min Na\\
+	%		Aerospace Engineering\\
+	%		University of Maryland
+}
+\date{February 2016}
+
+\doublespacing
+
+\begin{document}	
+\begin{titlepage}
+	\maketitle
+\end{titlepage}
+
+
+\section*{Abstract}
+%TODO: Write an abstract once paper is written
+	Wow, this is a great abstract. 
+
+\section{Background}
+%\subsection{Magnetostriction} %without * gives numbered section
+
+\input{Subfiles/1_Background-Motivations}
+
+
+\section{Completed Research}
+\input{Subfiles/2_completed_research}
+
+
+\section{Proposed Research}
+\input{Subfiles/3_proposed_research}
+
+
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{../BibTeX/library}
+
+\end{document}
