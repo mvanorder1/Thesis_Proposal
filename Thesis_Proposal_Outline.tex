@@ -37,7 +37,8 @@
 \usepackage{array} 		%creates tables
 \usepackage{bm}			%allows bolding of equations IN equation environment
 \usepackage{color}		%for making colored text
-\usepackage{caption,subcaption}	
+\usepackage{caption,subcaption}	%captions and subcaptions
+\usepackage{tcolorbox}	%for making colored boxes around equations
 
 
 %Defines shortcuts for frequently used equations
@@ -76,17 +77,17 @@
 %TODO: Write an abstract once paper is written
 	Wow, this is a great abstract. 
 
-\section{Background}
+\section{Background}\label{section1}
 %\subsection{Magnetostriction} %without * gives numbered section
 
 \input{Subfiles/1_Background-Motivations}
 
 
-\section{Completed Research}
+\section{Completed Research}\label{section2}
 \input{Subfiles/2_completed_research}
 
 
-\section{Proposed Research}
+\section{Proposed Research}\label{section3}
 \input{Subfiles/3_proposed_research}
 
 
