@@ -1,9 +1,9 @@
 
 \subsubsection{Thermal Grooving}
 
+The thermal grooving technique was examined to provide a comparison point to our proposed gallium contact angle method.  These thermal grooves appear at grain boundaries, but the most information can be drawn from grain boundaries formed by two different crystal orientations. Using electron backscatter diffraction, EBSD, we identified grain orientations on samples of galfenol and alfenol to identify the grain boundaries where \hkl(100), \hkl(110), and \hkl(111) orientations met.  By measuring the dihedral angle formed at these grain boundaries after polishing and annealing, we calculated the ratio of grain boundary energy and surface energy according to the following equation: 
 
-
-\begin{figure}[h!]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}[c]{0.45\textwidth}
 		\includegraphics[width=\linewidth]{afm-groove-fega}
@@ -18,6 +18,11 @@
 	\caption{(a) 3D rendering of (110)/(111) grain boundary on surface of  for (Fe-19\%Ga)+1.0\%NbC sample where the depth of groove is ~8 nm. (b) A quadratic fit of a (110)/(111) grain boundary profile for a (Fe-19\%Ga)+1.0\%NbC sample.}
 	\label{fig:thermal-groove}
 \end{figure}
+\begin{equation}
+	\frac{\gamma_{GB}}{\gamma_{S}} = 2\cos\left(\frac{\Psi_{S}}{2}\right) 
+\end{equation}
+where $\gamma_{GB}$ is the grain boundary energy, $\gamma_{S}  $ is the surface energy, and $\Psi_{S} $ is the dihedral angle, as described in Rohrer et al.\cite{Rohrer2010a} The most symmetric thermal groove came from a \hkl(110)/\hkl(111) grain boundary on a rolled and annealed (Fe-19\%Ga)+1.0\%NbC sample made by Suok-Min Na, as seen in the Figure \ref{fig:thermal-groove}.  The grain boundary profiles were measured using atomic force microscopy (AFM), and the dihedral angles were extrapolated from the profiles using both AFM software by Bruker and, the more accurate, quadratic fit.  The results are shown in Table \ref{groove-analysis}.  This groove in particular had a depth of $\sim$8 nm which is significantly smaller in depth compared to grooves of other metal alloys in literature.  Also, many of the grain boundary grooves were not suitable for measuring based on their lack of symmetry at the grain boundary interface. It is worthy to note that this technique is very time consuming and slightly destructive to the surface. To properly analyze the thermal grooving technique, an extensive grain boundary study of annealing temperatures and times on Alfenol and Galfenol would have to be carried out. While this may be an interesting avenue of research in the future, the resultant calculations of relative grain energies does not benefit our ultimate goal of achieving a comprehensive AGG model for Galfenol and Alfenol. Realization of our goal lies in the measurement of orientation-dependent surface energy using contact angle measurements. 
+
 
 \begin{table}[h!]
 	\centering
@@ -28,7 +33,7 @@
 		\hline
 		~	&\multicolumn{2}{|c|}{Bruker Software}		&\multicolumn{2}{|c|}{Quadratic Fit}	\\
 		\hline
-		Profile	&Dihedral Angle (\degree)	&Relative GB Energy	&Dihedral Angle (\degree)	&Relative GB Energy \\ 
+		Profile	&Dihedral Angle (\degree)	&Relative Energy	&Dihedral Angle (\degree)	&Relative Energy \\ 
 		\hline
 		1		&156.957	&0.399471	&151.253	&0.496475	\\
 		\hline
@@ -48,17 +53,11 @@
 	\label{groove-analysis}
 \end{table}
 
-
-The thermal grooving technique was examined to provide a comparison point to our proposed gallium contact angle method.  These thermal grooves appear at grain boundaries, but the most information can be drawn from grain boundaries formed by two different crystal orientations. Using electron backscatter diffraction, EBSD, we identified grain orientations on samples of galfenol and alfenol to identify the grain boundaries where \hkl(100), \hkl(110), and \hkl(111) orientations met.  By measuring the dihedral angle formed at these grain boundaries after polishing and annealing, we calculated the ratio of grain boundary energy and surface energy according to the following equation: 
-\begin{equation}
-\frac{\gamma_{GB}}{\gamma_{S}} = 2\cos\left(\frac{\Psi_{S}}{2}\right) 
-\end{equation}
-where $\gamma_{GB}$ is the grain boundary energy, $\gamma_{S}  $ is the surface energy, and $\Psi_{S} $ is the dihedral angle, as described in Rohrer et al.\cite{Rohrer2010a} The most symmetric thermal groove came from a \hkl(110)/\hkl(111) grain boundary on a rolled and annealed (Fe-19\%Ga)+1.0\%NbC sample made by Suok-Min Na, as seen in the Figure \ref{fig:thermal-groove}.  The grain boundary profiles were measured using atomic force microscopy (AFM), and the dihedral angles were extrapolated from the profiles using both AFM software by Bruker and, the more accurate, quadratic fit.  The results are shown in Table \ref{groove-analysis}.  This groove in particular had a depth of $\sim$8 nm which is significantly smaller in depth compared to grooves of other metal alloys in literature.  Also, many of the grain boundary grooves were not suitable for measuring based on their lack of symmetry at the grain boundary interface. It is worthy to note that this technique is very time consuming and slightly destructive to the surface. To properly analyze the thermal grooving technique, an extensive grain boundary study of annealing temperatures and times on Alfenol and Galfenol would have to be carried out. While this may be an interesting avenue of research in the future, the resultant calculations of relative grain energies does not benefit our ultimate goal of achieving a comprehensive AGG model for Galfenol and Alfenol. Realization of our goal lies in the measurement of orientation-dependent surface energy using contact angle measurements. 
 	
 
 
-\subsubsection{Contact Angle Goniometer}
-Preliminary designs of our contact angle goniometer implement a radiative temperature control box which encloses an argon gas filled container where the sample resides, as seen in Figure \ref{fig:rad-temp-box}.  The argon filled container was initially made of a clear acrylic plastic, but prolonged exposure to temperatures above 80\degree C caused thermal deformation of the plastic making longer experiments impossible to perform without environment contamination.  A clear pyrex container replaced the acrylic box to fix this issue.  Application of the liquid gallium drop to our surfaces was done via a mounted plastic syringe with commercially available disposable stainless steel hypodermic needles.  Observations of this application show that the hypodermic needles present multiple problems to the sessile drop method.  Liquid gallium tends to adhere strongly to the stainless steel needle tips which makes wetting to the sample very difficult.  Tapping the syringe will remove the drop from the needle and allow gallium to wet the surface, but this is not ideal because the additional dropping force from gravity will cause additional spreading not associated with the intrinsic surface energy of the substrate.  Also, the angled hypodermic tip tends to deform the highly viscous gallium drop resulting in non-uniform hemispheric drop shapes, as shown in Figure \ref{fig:deformed-ga}.
+\subsubsection{Contact Angle Goniometer (Verison 1)}
+Preliminary designs of our contact angle goniometer implement a radiative temperature control box which encloses an argon gas filled container where the sample resides, as seen in Figure \ref{fig:rad-temp-box}.  The presence of argon is meant to prevent any further oxidation of the Galfenol sample as well as the gallium droplet. The argon filled container was initially made of a clear acrylic plastic, but prolonged exposure to temperatures above 80\degree C caused thermal deformation of the plastic making longer experiments impossible to perform without environment contamination.  A clear pyrex container replaced the acrylic box to fix this issue.  Application of the liquid gallium drop to our surfaces was done via a mounted plastic syringe with commercially available disposable stainless steel hypodermic needles.  Observations of this application show that the hypodermic needles present multiple problems to the sessile drop method.  Liquid gallium tends to adhere strongly to the stainless steel needle tips which makes wetting to the sample very difficult.  Tapping the syringe will remove the drop from the needle and allow gallium to wet the surface, but this is not ideal because the additional dropping force from gravity will cause further spreading not associated with the intrinsic surface energy of the substrate.  Also, the angled hypodermic tip tends to deform the highly viscous gallium drop resulting in non-uniform hemispheric drop shapes, as shown in Figure \ref{fig:deformed-ga}.
 \begin{figure}
 	\centering
 	\begin{subfigure}[c]{0.45\textwidth}
@@ -75,16 +74,19 @@ Preliminary designs of our contact angle goniometer implement a radiative temper
 	\label{fig:prelim-design}
 \end{figure}
 
-For this experiment to succeed, a number of challenges were overcome. The simplest task involved polishing Galfenol samples using incrementally higher grit SiC paper and subsequent 0.1 $\mu$m colloidal silica particles to decrease the roughness to below 100 nm, as proven using AFM measurements. [FIND AFM PICTURE OF ROUGHNESS]
+For this experiment to succeed, a number of challenges were overcome. The simplest task involved polishing Galfenol samples using incrementally higher grit SiC paper and subsequent 0.1 $\mu$m colloidal silica particles to decrease the roughness to below 40 nm, as proven using AFM measurements. %TODO: Find AFM roughness picture?
+The radiative box that housed this experiment had a high variability in temperature caused by opening and closing the box when interaction with the gallium dispensing syringe was needed. A smaller apparatus with a top-side syringe opening was needed to properly perform gallium drop tests at specific temperatures and prevent interaction with the experiment environment. There must also be bright white backlighting to obtain a high contrast drop profile. In this radiative box configuration, the light reflecting off the liquid metal prevents a high contrast image, as seen in Figure \ref{fig:deformed-ga}. Proper contact angle measurements also require the gallium droplets to carefully wet the surface while forming an axisymmetric and spherical-like shape on the solid surface. Lastly, the argon gas environment could be more well contained, instead of just filling up the glass sample enclosure from the bottom and spilling out the top. This occurs because argon has a higher density compared to the surrounding environment. 
 
-Gallium droplets must carefully wet the surface while forming an axisymmetric and spherical-like droplet on the solid surface. 
+\subsubsection{Version 2}
+
+
 
 \begin{outline}[enumerate]
 	\1 Radiative box [~]
 		\2 Plexiglass chamber [X]
 		\2 Glass chamber [X]
-		\2 Low control of temperature and image clarity [~]
-			\3 Need temperature control and backlighting, while improving gas environment. [~]
+		\2 Low control of temperature and image clarity [X]
+			\3 Need temperature control and backlighting, while improving gas environment. [X]
 	\1 Aluminum conductive environmental chamber [~]
 		\2 Deformed droplets persist and contact angle cannot be properly measured [~]
 		\2 HCl etching to achieve axisymmetric gallium drops [~]

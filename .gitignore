@@ -1,3 +1,4 @@
+*.tex.~txs*
 *.aux
 *.bbl
 *.blg
