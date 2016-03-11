@@ -1,2 +1,7 @@
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
 *.log
 Thesis_Proposal_Outline.pdf
