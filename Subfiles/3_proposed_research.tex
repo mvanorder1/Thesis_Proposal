@@ -93,11 +93,22 @@ The following
 	\2 Since most adhesives are stored in \nalk[s] (also commonly used as industrial strength degreasers), PMMA boxes must be chemically welded together by a solvent at room temperature to keep the liquid environment contained. 
 \1 Polish single-crystal samples and EBSD them to check surface orientation. After the main sample surface orientation is discovered, the sample can be cut to obtain \hkl(001), \hkl(110), and \hkl(111) facets. Each sample is then polished again for EBSD measurement. 
 \1 Mount samples if flat samples cannot be achieved, and initiate two-liquid-phase method
+	\2 Measure static contact angles
+		\3 These are expected to either completely wet the surface in less than one second or return contact angles with a large margin of error due to the variability between receding and advancing angles. 
+		\3 One option is to use a high speed camera to capture the split second spreading of water on the metal surface. This could potentially capture an advancing contact angle before the droplet spreads completely. An advancing \ca can approximate the Young \ca since it is another minimum in the Gibbs free energy curve.
 	\2 Measure advancing and receding contact angles (CAs) for contact angle hysteresis (CAH)
 		\3 CAH will give accuracy of equilibrium CA on flat surface. 
 	\2 Use advancing CA for calculations
 		\3 For ideal-like flat surfaces, the advancing contact angle can be approximated as the Young contact angle. The accuracy of this can be determined by measuring the contact angle hysteresis on a given surface. The greater the CAH, the less reliable the approximation. 
-\1 Pattern surfaces with transparency paper $\gtrsim$40 $\mu$m since this is the lower limit of transparency paper
+\1 Pattern surfaces with transparency paper $\gtrsim$40 $\mu$m since this is the lower limit of transparency paper. A rough surface will increase the water contact angle, and the known roughness will allow calculation of a Young contact angle to be used in surface energy calculation. 
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=\linewidth]{young_cassie_wenzel}
+	\caption{Schemes of different wetting regimes. A – flat substrate; B – rough substrate, the Wenzel regime; C – rough substrate with air trapped under the drop, the Cassie–Baxter regime.\cite{Whyman2008}}
+	\label{fig:young_cassie_wenzel}
+\end{figure}
+
 	\2 The assumption of this patterned surface is that the Cassie-Baxter or Wenzel contact angle is the most stable contact angle, and the Young contact angle can be approximated using the Cassie-Baxter and Wenzel equations. This contact angle will be suitable for the of metal surface energy that will be calculated from Equation \ref{schultz2}.
 		\3 There seems to be controversy in literature on whether the equilibrium contact angle calculated in Cassie and Wenzel equations can be used as the Young \ca.\cite{Attension2015,Marmur2009b,Bracco2013}
 		\3 The Cassie-Baxter contact angle is an equilibrium contact angle as proven by Johnson and Dettre using thermodynamic principles.\cite{Johnson1964}
@@ -107,18 +118,20 @@ The following
 	This observable \ca is a result of roughening the surface, but because the trend of increasing \ca persists, I hypothesize that an induced roughness on isotropic metal surfaces could show increasing \ca[s] with increasing \nalk chain lengths. These induced roughnesses will be known, and using Wenzel\cite{Wenzel1936,Wenzel1949a} and Cassie\cite{Cassie1944} methods for calculating equilibrium \ca[s] and, resultantly, the orientation-dependent Galfenol surface energy. 
 		
 	\2 Per conversation with Dave Shahin, an experienced student in patterning surfaces, an array of roughnesses can be made on a single sample to test roughness effects on surface energy measurements of single crystal Galfenol and Alfenol. 
+		\3 There is a criteria for determining if the calculated contact angle on a rough surface is in Wenzel and Cassie-Baxter modes. 
 	
 \1 Redo two-liquid-phase experiment for patterned surface
 	\2 Calculate the Cassie and Wenzel mode equilibrium CA
 		\3 Expecting Cassie mode because the patterned channels will ideally be completely filled with hydrocarbon/\nalk liquid, thus \underline{repelling} the water droplet on the surface. This is due to the immiscibility of polar (distilled water) and non-polar (\nalk) solvents. 
-			\4 \textbf{Can we talk with Dr. Ruqian Wu about doing sessile drop, two-liquid-phase, simulation on patterned surface?} This can tell us if we can expect Cassie of Wenzel mode of water drop in hydrocarbon/\nalk environment. 
-			
-			\4 Dr. Wu has assigned a student to working on a difference in \fegacomp surface energy where $x =$ 19 and 25.
-	\2 \textbf{Is there a difference from one patterned orientation to another?}
-		\3 This will show if the patterning (induced roughness) will have a large impact on the CA and, as a result, \underline{Surface Energy}. 
+	\2 \textbf{Is there a difference from one patterned orientation to another?} This will show if the patterning (induced roughness) will have a large impact on the CA and, as a result, \underline{Surface Energy}. 
+		\3 If we have a defined roughness for {100}, {110}, and {111} samples
 \end{outline}
 
-\subsection{Induced roughness for Wenzel and Cassie modes}
+%\subsection{Induced roughness for Wenzel and Cassie modes}
 
 \subsection{DFT measurements from collaborator}
+\subsubsection{Cassie-Baxter or Wenzel mode}
+\textbf{Can Dr. Ruqian Wu simulate a sessile drop in a two-liquid-phase experiment on a patterned surface?} This can tell us if we can expect Cassie of Wenzel mode of water drop in hydrocarbon/\nalk environment. 
+
 \subsubsection{Two compositions of single crystal Galfenol}
+Dr. Wu has assigned a student to working on a difference in \fegacomp surface energy where $x =$ 19 and 25.
