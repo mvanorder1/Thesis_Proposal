@@ -57,7 +57,7 @@ where $\gamma_{GB}$ is the grain boundary energy, $\gamma_{S}  $ is the surface 
 
 
 \subsubsection{Contact Angle Goniometer (Verison 1)}
-Preliminary designs of our contact angle goniometer implement a radiative temperature control box which encloses an argon gas filled container where the sample resides, as seen in Figure \ref{fig:rad-temp-box}.  The presence of argon is meant to prevent any further oxidation of the Galfenol sample as well as the gallium droplet. The argon filled container was initially made of a clear acrylic plastic, but prolonged exposure to temperatures above 80\degree C caused thermal deformation of the plastic making longer experiments impossible to perform without environment contamination.  A clear pyrex container replaced the acrylic box to fix this issue.  Application of the liquid gallium drop to our surfaces was done via a mounted plastic syringe with commercially available disposable stainless steel hypodermic needles.  Observations of this application show that the hypodermic needles present multiple problems to the sessile drop method.  Liquid gallium tends to adhere strongly to the stainless steel needle tips which makes wetting to the sample very difficult.  Tapping the syringe will remove the drop from the needle and allow gallium to wet the surface, but this is not ideal because the additional dropping force from gravity will cause further spreading not associated with the intrinsic surface energy of the substrate.  Also, the angled hypodermic tip tends to deform the highly viscous gallium drop resulting in non-uniform hemispheric drop shapes, as shown in Figure \ref{fig:deformed-ga}.
+Preliminary designs of our contact angle goniometer implement a radiative temperature control box which encloses an argon gas filled container where the sample resides, as seen in Figure \ref{fig:rad-temp-box}.  The presence of argon is meant to prevent any further oxidation of the Galfenol sample as well as the gallium droplet. The argon filled container was initially made of a clear acrylic plastic, but prolonged exposure to temperatures above 80\degree C caused thermal deformation of the plastic making longer experiments impossible to perform without environment contamination.  A clear pyrex container replaced the acrylic box to fix this issue.  Application of the liquid gallium drop to our surfaces was done via a mounted plastic syringe with commercially available disposable stainless steel hypodermic needles.  Observations of this application show that the hypodermic needles present multiple problems to the sessile drop method.  Liquid gallium tends to adhere strongly to the stainless steel needle tips which makes wetting to the sample very difficult.  Tapping the syringe will remove the drop needle and allow gallium to wet the surface, but this is not ideal because the additional dropping force from gravity will cause further spreading not associated with the intrinsic surface energy of the substrate.  Also, the angled hypodermic tip tends to deform the highly viscous gallium drop resulting in non-uniform hemispheric drop shapes, as shown in Figure \ref{fig:deformed-ga}.
 \begin{figure}
 	\centering
 	\begin{subfigure}[c]{0.45\textwidth}
@@ -87,25 +87,31 @@ The radiative box that housed this experiment had a high variability in temperat
 
 \subsubsection{Version 2}
 
-Most of the issues associated with Version 1 of are addressed in Version 2 of the gallium drop experiment. The new experimental apparatus can be seen in Figure \ref{fig:enviro_chamber}. The main structure is made of aluminum with two round glass windows on the front and back. The aluminum is meant to conductively transfer heat to the substrate by means of a heating cable wrapped around the outside of the structure. The high thermal conductivity of aluminum allows for a quick transfer of heat, thus an increased control of sample temperature using the heating tape. The time percentage dial controller attached to the heating tape is calibrated with the sample temperature using a thermocouple placed on the sample surface. Sample temperature can be consistently controlled with $\pm$0.5\degree C accuracy. Backlighting on the gallium drop profile is greatly improved by having only one white light source coming from one side of the droplet, as seen in Figure \ref{fig:deformed_ga}.
-
-Pure liquid gallium obtains viscoelastic properties when trace amounts of oxygen are present via formation of oxide shell.
-
+Most of the issues associated with Version 1 of are addressed in Version 2 of the gallium drop experiment. The new experimental apparatus can be seen in Figure \ref{fig:enviro_chamber}. The main structure is made of aluminum with two round glass windows on the front and back. The aluminum is meant to conductively transfer heat to the substrate by means of a heating cable wrapped around the outside of the structure. The high thermal conductivity of aluminum allows for a quick transfer of heat, thus an increased control of sample temperature using the heating tape. The time percentage dial controller attached to the heating tape is calibrated with the sample temperature using a thermocouple placed on the sample surface. Sample temperature can be consistently controlled with $\pm$0.5\degree C accuracy. Backlighting greatly improved the drop profile contrast by having only one white light source coming from one side of the droplet, as seen in Figure \ref{fig:deformed_ga}. The Ar environment is also far more contained and controlled. The silicone sealant creates a nearly air-tight system where the argon will displace all gas contaminants that could oxidize the sample or gallium droplet. These precautions are suitable for any metals samples we test because each sample is polished according to the procedure described above and then cleaned with acetone to remove any oxides. Once the sample is inserted and sealed in the environmental chamber, the Ar prevents oxidation throughout the experiment. A positive partial pressure is achieved in the chamber with an in- and out-valve. %TODO find more sufficient answer to how this removes oxides. 
 \begin{figure}
 	\centering
-		\includegraphics[width=0.7\linewidth]{enviro_chamber}
+	\includegraphics[width=0.7\linewidth]{enviro_chamber}
 	\caption{The second version of our gallium contact angle goniometer. The aluminum enclosure conductively transfers heat, the gas lines flow Ar gas into the chamber, top-mounted thermocouples monitor the gas and sample temperature, and the glass windows allow for backlighting of the drop profile along with high resolution image capture using a DSLR camera.}
 	\label{fig:enviro_chamber}
 \end{figure}
+While extensive steps have been taken to inhibit oxidation of our metal samples, preventing oxidation on the surface of liquid gallium was a greater challenge. Pure gallium and Gallium-based alloy surfaces instantly oxidize in ambient environments, turning into a thin layer of gallium oxide (Ga$_{2}$O$_{3}$ and Ga$_{2}$O).\cite{Regan1995,Regan1997,Scharmann2004} This oxide layer is solid and remains elastic until it experiences a yield stress. Therefore, that an oxidized gallium droplet does not behave as a simple liquid, but as a viscoelastic material. In addition, the oxide layer of gallium is known to adhere to almost any solid surface, causing a severe stiction problem that interferes with interfacial energy measurements.\cite{Scharmann2004} Figure \ref{fig:deformed_ga} shows our direct observation of this phenomenon with teardrop shaped droplets formed by adhering to the iron surface while still being pulled upwards by the deposition needles. The general shape of these drops were unchanged for many hours even at temperatures approaching $\sim$100\degree C, thus exhibiting the stability of viscoelastic properties caused by the solid oxide layer. Removing the oxide layer from liquid gallium will return normal liquid properties to gallium and allow the use of axisymmetric drop analysis calculations: Young-Laplace equation, 
+%todo: [NEED MORE TECHNIQUES FROM KRUSS GONIOMETER]
+Oxide removal permits liquid gallium to directly interact with metal surfaces instead of gallium oxide; the derived terms for \gamSL and \gamLV in Equation \ref{youngs-eqn-ga} become more robust. 
+
+A number of techniques have been developed to remove and recover the oxide layer on liquid gallium,\cite{Kim2013,Doudrick2014,Khan2014} and the most useful strategy for this experiment is a chemical vapor etch. 
+
+Pure liquid gallium obtains viscoelastic properties when trace amounts of oxygen are present via formation of oxide shell. 
+
+
 
 \begin{figure}
 	\centering
-	\begin{subfigure}[c]{0.45\textwidth}
+	\begin{subfigure}[c]{0.35\textwidth}
 		\includegraphics[width=\linewidth]{ga_41c}
 		\subcaption{~}
 		\label{fig:ga_41c}		
 	\end{subfigure}
-	\begin{subfigure}[c]{0.47\textwidth} 
+	\begin{subfigure}[c]{0.37\textwidth} 
 		\includegraphics[width=\linewidth]{ga_100c}
 		\subcaption{~}
 		\label{fig:ga_100c}		
