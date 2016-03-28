@@ -40,6 +40,7 @@
 \usepackage{bm}			%allows bolding of equations IN equation environment
 \usepackage{color}		%for making colored text
 \usepackage{caption,subcaption}	%captions and subcaptions
+
 %\usepackage{tcolorbox}	%for making colored boxes around equations
 
 
@@ -67,11 +68,20 @@
 }
 \date{March 2016}
 
+%\usepackage[
+%backend=biber,
+%style=nature,
+%]{biblatex}
+%
+%\addbibresource{BibTeX/library.bib}
+
 \doublespacing
 
 \begin{document}	
 \begin{titlepage}
+	\clearpage 
 	\maketitle
+	\thispagestyle{empty}
 \end{titlepage}
 
 %test
@@ -95,7 +105,7 @@
 
 
 
-
+%\printbibliography
 \bibliographystyle{IEEEtran}
 \bibliography{BibTeX/library}
 
