@@ -49,19 +49,19 @@ where \gamLV, \gamSL, and \gamSV are the liquid-vapor, solid-liquid, and solid-v
 
 Assuming the the volume of the droplet remains constant:
 \begin{equation*}
-\begin{gathered}
-G = \left[\frac{9\pi V^{2}}{(1-\cos\theta)(2+\cos\theta)^{2}}\right]^{2/3}
-\left[2\gamma_{LV} - a(1+\cos\theta)\right]\\
-\frac{dG}{d\theta} = \left[\frac{9\pi V^{2}}{(1-\cos\theta)^{4}(2+\cos\theta)^{5}}\right]^{1/3}
-2\left[a-\gamma_{LV}\cos\theta)\right]\sin\theta\\ \\
-\begin{split}
-\left[\frac{dG}{d\theta}\right]_{\theta=\theta_{eq}}&=0=a-\gamma_{LV}\cos\theta\\
-\therefore a 	&= \gamma_{LV}\cos\theta\\
-\end{split}					
-\end{gathered}
+	\begin{gathered}
+		G = \left[\frac{9\pi V^{2}}{(1-\cos\theta)(2+\cos\theta)^{2}}\right]^{2/3}
+		\left[2\gamma_{LV} - a(1+\cos\theta)\right]\\
+		\frac{dG}{d\theta} = \left[\frac{9\pi V^{2}}{(1-\cos\theta)^{4}(2+\cos\theta)^{5}}\right]^{1/3}
+		2\left[a-\gamma_{LV}\cos\theta)\right]\sin\theta\\ \\
+		\begin{split}
+			\left[\frac{dG}{d\theta}\right]_{\theta=\theta_{eq}}&=0=a-\gamma_{LV}\cos\theta\\
+			\therefore a 	&= \gamma_{LV}\cos\theta\\
+		\end{split}					
+	\end{gathered}
 \end{equation*}
-\begin{equation}\label{youngs-eqn}
-\boxed{\gamma_{SV} =\gamma_{SL}-\gamma_{LV}\cos\theta}	
+\begin{equation}\label{young_eqn}
+	\boxed{\gamma_{SV} =\gamma_{SL}-\gamma_{LV}\cos\theta}	
 \end{equation}
 %\end{tcolorbox}
 We attempt to model a new contact angle method based on Equation \ref{youngs-eqn} in Section \ref{section2}

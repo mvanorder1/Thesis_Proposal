@@ -1,22 +1,16 @@
 \subsection{Two-liquid-phase contact angle method}
 
-Our new method returns to the idea of water contact angles on metal surfaces. As we know, water will spread completely on a nearly-flat metal surface surrounded by a gaseous environment. Instead of a gaseous environment, the water-metal system can be surrounded by another liquid that is immiscible with water. It has been observed that instead of wetting completely, the water droplet will only partially wet the metal when the surrounding environment is an immiscible liquid. This is called the two-liquid-phase contact angle method. 
+Our new method returns to the idea of water contact angles on metal surfaces. As we know, water will spread completely on a nearly-flat metal surface surrounded by a gaseous environment. Instead of a gaseous environment, the water-metal system can be surrounded by another liquid that is immiscible with water. It has been observed that instead of wetting completely, the water droplet will only partially wet the metal when the surrounding environment is an immiscible liquid. This is called the two-liquid-phase contact angle method developed by Jacques Schultz.\cite{Schultz1977,Schultz1977a,Schultz1992}
 
 \subsubsection{Derivation of Schultz Method}
-
-
 	
-Assuming Young's equation can be applied to a liquid-liquid(bulk phase)-solid ($L_{1}-L_{2}-S$) system, we have the relationship:
+Assuming Young's equation (Equation \ref{young_eqn}) can be applied to a liquid-liquid(bulk phase)-solid ($L_{1}-L_{2}-S$) system, we have the relationship:
 \begin{equation}
 \label{youngs}
 	\gamma_{SL_{2}} = \gamma_{L_{1}L_{2}}\cos\theta_{SL_{1}} + \gamma_{SL_{1}}
 \end{equation}
 
-In this way, \gamSV, which is the driving force of spreading the one-liquid-phase method (and causes complete spreading for high-surface energy metal surfaces), is replaced by $ \gamma_{SL_{2}} $, where $\gamma_{SL_{2}} <$ \gamSV. Hence, the contact angle in this system is measurable. 
-
-
-
-According to Fowkes \cite{Fowkes1964}, $\gamma_{SL_{1}}$ and $\gamma_{SL_{2}}$ are given by:
+In this way, \gamSV, which is the driving force of spreading the one-liquid-phase method that causes complete wetting on high-surface energy metal surfaces, is replaced by $ \gamma_{SL_{2}} $, where $\gamma_{SL_{2}} <$ \gamSV. Hence, the contact angle in this system is measurable. According to Fowkes\cite{Fowkes1964}, $\gamma_{SL_{1}}$ and $\gamma_{SL_{2}}$ are given by:
 \begin{equation} 
 \label{gSL1}
 	\gamma_{SL_{1}} = \gamma_{S} + \gamma_{L_{1}} - 2(\gamma_{S}^{D}\gamma_{L_{1}}^{D}) - I_{SL_{1}}^{P}
@@ -25,7 +19,7 @@ According to Fowkes \cite{Fowkes1964}, $\gamma_{SL_{1}}$ and $\gamma_{SL_{2}}$ a
 \label{gSL2}
 	\gamma_{SL_{2}} = \gamma_{S} + \gamma_{L_{2}} - 2(\gamma_{S}^{D}\gamma_{L_{2}}^{D}) - I_{SL_{2}}^{P}
 \end{equation} 
-where $\gamma$ and $\gamma^{D}$ are the surface energy and its dispersive component, respectively, and $I_{SL_{1}}^{P}$ is a specific (nondispersive) interaction term that includes all interactions between the solid and the liquid (dipole-dipole, dipole-induced dipole, hydrogen bonds, $\pi$ bonds,...) except London dispersion interactions. 
+where $\gamma$ and $\gamma^{D}$ are the surface energy and its dispersive component, respectively, and $I_{SL_{1}}^{P}$ is a specific (nondispersive) interaction term that encompasses all interactions between the solid and the liquid (dipole-dipole, dipole-induced dipole, hydrogen bonds, $\pi$ bonds,...) except London dispersion interactions. 
 %TODO Define and understand dispersive vs. polar components of surface energy.
 %TODO Define and understand London dispersion forces
 Substituting Equations \ref{gSL1} and \ref{gSL2} into \ref{youngs}:
@@ -50,7 +44,32 @@ In order to calculate the equilibrium value of \gamSV for a surface, we can inte
 \underbracket{[(\gamma_{W}^{D})^{1/2}-(\gamma_{H}^{D})^{1/2}] }_{\text{\normalsize{$x$}}} + 
 \underbracket{I_{SW}^{P}}_{\text{\normalsize{$b$}}} 
 \] 
-A data set of xy-coordinates will be made by dropping water in an \nalk environment to determine $\gamma_{S}^{D}$ and $I_{SW}^{P} $. $\gamma_{S}^{D} $ will be calculated from the slope of the measured dataset. We can represent the polar interaction by the geometric mean of the polar component of the surface free energy of liquid and solid according to the Equation \ref{Isw} proposed by Owens and Wendt \cite{Owens1969}. The solid surface energy can then be determined from Equation \ref{gamS}:
+A data set of xy-coordinates will be made by dropping water in an \nalk environment to determine $\gamma_{S}^{D}$ and $I_{SW}^{P} $. $\gamma_{S}^{D} $ will be calculated from the slope of the measured dataset. 
+
+\begin{table}[h!]
+	\centering
+	\caption{Hydrocarbon surface tension and water-hydrocarbon interfacial energy}
+	\begin{tabular} { |c||c|c|  } %\label{nalkSE}
+		%	\hline
+		%	\multicolumn{3}{|c|}{Hydrocarbon surface tension and water-hydrocarbon interfacial energy}\\
+		\hline
+		\textbf{\nalk[s]}	&\textbf{$\bm{\gamma_{H}}$ (mJ/m$\bm{^{2}}$)}	&\textbf{$\bm{\gamma_{WH}}$ (mJ/m$\bm{^{2}}$)}	\\
+		\hline
+		hexane		&18.4	&50.1 \\
+		\hline
+		octane		&21.7	&49.8 \\
+		\hline
+		decane		&23.8	&51.8 \\
+		\hline
+		hexadecane	&27.5	&51.3 \\
+		\hline
+	\end{tabular}
+	\label{knownsurften}
+\end{table}
+
+
+
+We can represent the polar interaction by the geometric mean of the polar component of the surface free energy of liquid and solid according to the Equation \ref{Isw} proposed by Owens and Wendt \cite{Owens1969}. The solid surface energy can then be determined from Equation \ref{gamS}:
 \begin{equation}
 \label{Isw}
 	\begin{split}
@@ -61,29 +80,8 @@ A data set of xy-coordinates will be made by dropping water in an \nalk environm
 \begin{equation}
 \label{gamS}	\gamma_{S} = \gamma_{S}^{D} + \gamma_{S}^{P}	
 \end{equation}
-
 Literature values from Schultz et al.\cite{Schultz1977} allow us to use Equation \ref{schultz2} to calculate $\gamma_{S}$:
 
-\begin{table}[h!]
-\centering
-\caption{Hydrocarbon surface tension and water-hydrocarbon interfacial energy}
-\begin{tabular} { |c||c|c|  } %\label{nalkSE}
-%	\hline
-%	\multicolumn{3}{|c|}{Hydrocarbon surface tension and water-hydrocarbon interfacial energy}\\
-	\hline
-	\textbf{\nalk[s]}	&\textbf{$\bm{\gamma_{H}}$ (mJ/m$\bm{^{2}}$)}	&\textbf{$\bm{\gamma_{WH}}$ (mJ/m$\bm{^{2}}$)}	\\
-	\hline
-	hexane		&18.4	&50.1 \\
-	\hline
-	octane		&21.7	&49.8 \\
-	\hline
-	decane		&23.8	&51.8 \\
-	\hline
-	hexadecane	&27.5	&51.3 \\
-	\hline
-\end{tabular}
-\label{knownsurften}
-\end{table}
 %TODO How are polar and dispersive components of surface tension determined?
 
 Surface energy of muscovite mica will be determined to verify data published in Schultz et al.\cite{Schultz1977,Schultz1992}, and validate the accuracy of the experimental apparatus. 
