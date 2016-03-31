@@ -1,6 +1,6 @@
 \subsection{Two-liquid-phase contact angle method}
 
-Our new method returns to the idea of water contact angles on metal surfaces. As we know, water will spread completely on a nearly-flat metal surface surrounded by a gaseous environment. Instead of a gaseous environment, the water-metal system can be surrounded by another liquid that is immiscible with water. It has been observed that instead of wetting completely, the water droplet will only partially wet the metal when the surrounding environment is an immiscible liquid. This is called the two-liquid-phase contact angle method developed by Jacques Schultz.\cite{Schultz1977,Schultz1977a,Schultz1992}
+Our new method returns to the idea of water contact angles on metal surfaces. As we know, water will spread completely on a nearly-flat metal surface surrounded by a gaseous environment. Instead of a gaseous environment, the water-metal system can be surrounded by another liquid that is immiscible with water. It has been observed that instead of wetting completely, the water droplet will only partially wet the metal when the surrounding environment is an immiscible liquid. This is called the two-liquid-phase contact angle method developed by Jacques Schultz.\cite{Schultz1977,Schultz1977a,Schultz1992} 
 
 \subsubsection{Derivation of Schultz Method}
 	
@@ -67,9 +67,10 @@ $\gamma_{W}$, $\gamma_{H}$, and $\gamma_{WH}$ are known from consistently confir
 	\label{knownsurften}
 \end{table}
 
+%TODO: define London 
 
+The polar component of the solid surface energy is determined using basically the same method described above,\cite{Schultz1977} but the bulk liquids now have both dispersive and polar components. These bulk liquids of chloroalkanes, nitroalkanes, aromatics, or alcohols are expected to establish a linear relationship between $I_{SW}^{P} $ and the square root of the polar component of surface tension from the bulk liquids. Schultz et al. suggests that this result allows all nondispersive interactions to be grouped together as a polar interaction, and they may be represented by the geometric mean of the polar component of the surface free energy of liquid and solid, as proposed by Owens and Wendt in Equation \ref{Isw}. This expression is verified experimentally, but there are no theoretical reasons why all nondispersive interactions should be represented by a geometric-mean expression.\cite{Fowkes1964}
 
-The polar component of the solid surface energy is determined We can represent the polar interaction by the geometric mean of the polar component of the surface free energy of liquid and solid according to the Equation \ref{Isw} proposed by Owens and Wendt \cite{Owens1969}. The solid surface energy can then be determined from Equation \ref{gamS}:
 \begin{equation}
 \label{Isw}
 	\begin{split}
@@ -77,16 +78,43 @@ The polar component of the solid surface energy is determined We can represent t
 	\rightarrow ~ \gamma_{S}^{P}	& = \frac{(I_{SW}^{P})^{2} }{4\gamma_{L}^{P}} 
 	\end{split}
 \end{equation}
+The solid surface energy can then be determined from Equation \ref{gamS}:
 \begin{equation}
 \label{gamS}	\gamma_{S} = \gamma_{S}^{D} + \gamma_{S}^{P}	
 \end{equation}
-Literature values from Schultz et al.\cite{Schultz1977} allow us to use Equation \ref{schultz2} to calculate $\gamma_{S}$:
 
-%TODO How are polar and dispersive components of surface tension determined?
+Since Schultz published his seminal paper, his method has been used to measure very high surface energy materials ranging from ~50 mJ/m$^{2}$ to 487 mJ/m$^{2}$.\cite{Nakamura2015} However, many of these studies fail to consider the wetting modes of water on their solid surfaces in a bulk \nalk environment. Giljean et al. examines the dependence of contact angles on the roughness of high surface energy titanium surfaces using the two-liquid-phase method. They show that, depending on the cleaning technique used to remove surface contaminations, the contact angle will change more with a decrease in roughness. Sound arguments are made for the type of wetting regime (Wenzel, Cassie-Baxter, or somewhere in-between) encountered at each step of wetting. An issue occurs when the authors attempt to use the Cassie-Baxter equation to calculate the Young \ca. The Cassie-Baxter equation (Equation \ref{cassie_gen}), as defined in the original publication,\cite{Cassie1944} is designed for a general surface, where $f_1$ is the \textit{total} area of solid under the drop per unit projected area under the drop and $\theta_Y,1$ is the contact angle on a smooth surface of material 1. $f_2$ is defined similarly to $f_2$ where material 2 is air or some other medium. Many papers, as pointed out by Milne et al.,\cite{Milne2012} falsely use Equation \ref{cassie_coplanar} for randomly rough surfaces when this equation is for the special case of a coplanar liquid-vapor and solid-liquid interface, as illustrated in Figure \ref{fig:cassie_coplanar}. To use this simple equation, a surface would have to be patterned with rectangular pillars with a small enough spacing to prevent capillary forces from causing the liquid to penetrate the roughness. Keeping this in mind, I moved to the two-liquid-phase experiment originally performed on cleaved mica sheets. 
+
+\begin{equation}
+\label{cassie_gen}	
+\cos\theta_{CB} = f_{1}\cos\theta_{Y} - f_{2}
+\end{equation}
+
+\begin{equation}
+	\label{cassie_coplanar}	
+	\cos\theta_{CB} = f\cos\theta_{Y} - (1-f)
+\end{equation}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{cassie_coplanar}
+	\caption{Schematic close up of three rough 2-D surfaces. Solid is blue/gray, air is white, liquid is the cross-hatched area above the surface. Liquid–vapor and solid–liquid interfaces of drop are denoted by the black line. A smooth-topped rough surface, which (for zero penetration of liquid) has coplanar solid–liquid and liquid–vapor interface (i.e. interfaces are in line with each other). This yields $ f_{1}=f $ and $ f_{2}=(1-f) $. Image source: \cite{Milne2012}}
+	\label{fig:cassie_coplanar}
+\end{figure}
+
+Preliminary two-liquid-phase method experiments on muscovite mica showed quick and complete wetting of water on pristine mica surfaces cleaved in decane and hexadecane, contradictory to published results.\cite{Schultz1992} Clearly, more iterations of this experiment must be done to recreate this seminal paper's data, but this made me consider how a water droplet on a mirror-finished material of even greater surface energy (e.g. Fe and Fe alloys) would spread even faster than it had on a pristine mica surface. 
+
+When mica samples were removed from the decane environment, they were wiped clean with KimWipes and further cleaned with acetone. When the samples were returned to the decane environment, a droplet wet the surface with an observable \ca. When this process was repeated in hexadecane, the observed \ca increased as observed in Schultz et al. This shows that even a rough surface can be measured for surface energy using the two-liquid-phase method. If this roughness is controlled by patterning the surface to a specific geometry, the same trend can be observed with the added benefit of a robust calculation of Young's contact angle by way of Equation \ref{cassie_coplanar}. 
+
+A number of assumptions will have to be made in this method 
+
+%TODO: CONTINUE HERE PLEASE. INSERT ASSUMPTIONS TO BE MADE AND THEN EXTEND TO ORIENTATION DEPENDENCE ON GALFENOL SINGLE CRYSTALS.
+
+This observable \ca is obviously a result of roughening the surface. , but because the trend of increasing \ca persists, I hypothesize that an induced roughness on isotropic metal surfaces could show increasing \ca[s] with increasing \nalk chain lengths. These induced roughnesses will be known, and using Wenzel\cite{Wenzel1936,Wenzel1949a} and Cassie\cite{Cassie1944} methods for calculating equilibrium \ca[s] and, resultantly, the orientation-dependent Galfenol surface energy. 
 
 Surface energy of muscovite mica will be determined to verify data published in Schultz et al.\cite{Schultz1977,Schultz1992}, and validate the accuracy of the experimental apparatus. 
 
-The following 
+The following is an experimental plan 
 
 \subsubsection{Experimental plan}
 \begin{outline}[enumerate]
@@ -120,7 +148,7 @@ The following
 	This observable \ca is a result of roughening the surface, but because the trend of increasing \ca persists, I hypothesize that an induced roughness on isotropic metal surfaces could show increasing \ca[s] with increasing \nalk chain lengths. These induced roughnesses will be known, and using Wenzel\cite{Wenzel1936,Wenzel1949a} and Cassie\cite{Cassie1944} methods for calculating equilibrium \ca[s] and, resultantly, the orientation-dependent Galfenol surface energy. 
 		
 	\2 Per conversation with Dave Shahin, an experienced student in patterning surfaces, an array of roughnesses can be made on a single sample to test roughness effects on surface energy measurements of single crystal Galfenol and Alfenol. 
-		\3 There is a criteria for determining if the calculated contact angle on a rough surface is in Wenzel and Cassie-Baxter modes. 
+		\3 There is a criteria for determining if the calculated contact angle on a rough surface is in Wenzel and Cassie-Baxter modes.\cite[p. 53]{Milne2012}
 	
 \1 Redo two-liquid-phase experiment for patterned surface
 	\2 Calculate the Cassie and Wenzel mode equilibrium CA
