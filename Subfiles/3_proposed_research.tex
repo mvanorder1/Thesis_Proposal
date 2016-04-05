@@ -2,42 +2,8 @@
 
 Our new method returns to the idea of water contact angles on metal surfaces. As we know, water will spread completely on a nearly-flat metal surface surrounded by a gaseous environment. Instead of a gaseous environment, the water-metal system can be surrounded by another liquid that is immiscible with water. It has been observed that instead of wetting completely, the water droplet will only partially wet the metal when the surrounding environment is an immiscible liquid. This is called the two-liquid-phase contact angle method developed by Jacques Schultz.\cite{Schultz1977,Schultz1977a,Schultz1992} 
 
-\subsubsection{Derivation of Schultz Method}
-	
-Assuming Young's equation (Equation \ref{young_eqn}) can be applied to a liquid-liquid(bulk phase)-solid ($L_{1}-L_{2}-S$) system, we have the relationship:
-\begin{equation}
-\label{youngs}
-	\gamma_{SL_{2}} = \gamma_{L_{1}L_{2}}\cos\theta_{SL_{1}} + \gamma_{SL_{1}}
-\end{equation}
 
-In this way, \gamSV, which is the driving force of spreading the one-liquid-phase method that causes complete wetting on high-surface energy metal surfaces, is replaced by $ \gamma_{SL_{2}} $, where $\gamma_{SL_{2}} <$ \gamSV. Hence, the contact angle in this system is measurable. According to Fowkes\cite{Fowkes1964}, $\gamma_{SL_{1}}$ and $\gamma_{SL_{2}}$ are given by:
-\begin{equation} 
-\label{gSL1}
-	\gamma_{SL_{1}} = \gamma_{S} + \gamma_{L_{1}} - 2(\gamma_{S}^{D}\gamma_{L_{1}}^{D}) - I_{SL_{1}}^{P}
-\end{equation}
-\begin{equation}
-\label{gSL2}
-	\gamma_{SL_{2}} = \gamma_{S} + \gamma_{L_{2}} - 2(\gamma_{S}^{D}\gamma_{L_{2}}^{D}) - I_{SL_{2}}^{P}
-\end{equation} 
-where $\gamma$ and $\gamma^{D}$ are the surface energy and its dispersive component, respectively, and $I_{SL_{1}}^{P}$ is a specific (nondispersive) interaction term that encompasses all interactions between the solid and the liquid (dipole-dipole, dipole-induced dipole, hydrogen bonds, $\pi$ bonds,...) except London dispersion interactions.
-
-%TODO Define and understand dispersive vs. polar components of surface energy.
-%TODO Define and understand London dispersion forces
-Substituting Equations \ref{gSL1} and \ref{gSL2} into \ref{youngs}:
-
-\begin{equation} 
-\label{schultz1}
-	\gamma_{SL_{1}}-\gamma_{SL_{2}}+\gamma_{L_{1}L_{2}}\cos\theta_{SL_{1}} = 2(\gamma_{S}^{D})^{1/2}  [(\gamma_{L_{1}}^{D})^{1/2}-(\gamma_{L_{2}}^{D})^{1/2}] + I_{SL_{1}}^{P} - I_{SL_{2}}^{P}
-\end{equation}
-
-We will be using $L_{1}$ as water, $L_{2}$ as \nalk[s], and $I_{SL_{2}}^{P}$ may be considered equal to zero because the surface free energy of \nalk[s] only consists of the London dispersion term. This is because \nalk[s] only contain C-C and C-H atoms connected by $\sigma$-bonds, with a generic formula of C$_{n}$H$_{2n+2}$. C and H have very similar electronegativities of $\chi_{C}=2.55$ and $\chi_{H}=2.20$, respectively. This shows that all bonds in \nalk[s] are non-polar, hence there are no polar interactions in \nalk[s]. Our final equation is now:
-
-\begin{equation} 
-\label{schultz2}
-	\gamma_{W}-\gamma_{H}+\gamma_{WH}\cos\theta_{W} = 2(\gamma_{S}^{D})^{1/2}  [(\gamma_{W}^{D})^{1/2}-(\gamma_{H}^{D})^{1/2}] + I_{SW}^{P} 
-\end{equation} 
-
-In order to calculate the equilibrium value of \gamSV for a surface, we can interpret Equation \ref{schultz2} as a classic linear function, $y = mx + b$:
+A full derivation of this method can be found in Appendix \ref{appendixB}. In order to calculate the equilibrium value of \gamSV for a surface, we start by measuring the water \ca on our solid immersed in \nalk[s]. By interpreting Equation \ref{schultz2} as a classic linear function, $y = mx + b$, we can find the dispersive component :
 
 \[
 \underbracket{\gamma_{W}-\gamma_{H}+\gamma_{WH}\cos\theta_{W}}_{\text{\normalsize{$y$}}} =
@@ -122,27 +88,23 @@ Possible errors with this method will arise from non-atomically flat surfaces an
 %The procedure for carrying out this study is as follows:
 \subsubsection{Experimental plan}
 %\renewcommand{\outlineii}{cenumerate}
-\begin{outline}[enumerate]
-\setlength{\itemindent}{0em}
-\1 For the measuring the dispersive solid surface energy component, four different acrylic glass (Poly(methyl methacrylate), PMMA) boxes for hexane, octane, decane, and hexadecane environments will be used to contain the experiment. Acrylic has a high chemical compatibility with \nalk[s], and the transparent optical properties will not affect the contact angle pictures taken.\cite{Thermoscientific} Since most adhesives are stored in \nalk[s] (also commonly used as industrial strength degreasers), PMMA boxes must be chemically welded together by a solvent at room temperature to keep the liquid environment contained. The same boxes will be created for the other liquid mediums used to measure the polar solid surface energy component. 
-
-\1 Single-crystal samples (\fegacomp where $x=19,25$) will be polished using SiC paper followed by 0.1 $\mu$m particle colloidal silica gel to achieve a mirror finish. EBSD or single-crystal XRD is used to find surface orientation. After the main sample surface orientation is discovered, the sample can be cut using wire cut electric discharge machining to obtain \hkl(001), \hkl(110), and \hkl(111) facets. Each sample is then polished again for EBSD measurement and surface energy measurement. As soon as polished samples have reached a mirror-finish, they will be immersed in the \nalk environment.  
-
-\1 Samples will be mounted with the surface perpendicular to the dispensing needle and the two-liquid-phase method will be administered. This first experiment will attempt to measure a \ca on the polished Galfenol samples, but the probe water will likely spread over the surface very quickly to achieve complete wetting. Advancing and receding \ca[s] will be measured to find the contact angle hysteresis (CAH), as well as the drop volume of respective angles. An option for recording CAH on our polished surfaces is a high speed camera that to capture the wetting line spreading and receding . Coupled with the telescopic lens on the Kruss goniometer provided by UMD's Civil \& Environmental Engineering we can use a high speed CCD camera to capture such images. From the advancing and receding \ca[s], a proper averaging can be used to estimate the most stable contact angle, as seen in Equation \ref{avg_cah}.\cite{Andrieu1994} The most stable contact angle has also been measured by simply vibrating the system for ~15 s.\cite{Meiron2004} An averaging of advancing and receding \ca[s] is reasonable considering the practical advancing and receding \ca[s] are metastable states on opposite sides of a Gibbs energy vs. contact angle plot, seen in Figure \ref{fig:gibbs_ca}.
+%\begin{outline}[enumerate]
+%\setlength{\itemindent}{0em}
+\textbf{1)} For the measuring the dispersive solid surface energy component, four different acrylic glass (Poly(methyl methacrylate), PMMA) boxes for hexane, octane, decane, and hexadecane environments will be used to contain the experiment. Acrylic has a high chemical compatibility with \nalk[s], and the transparent optical properties will not affect the contact angle pictures taken.\cite{Thermoscientific} Since most adhesives are stored in \nalk[s] (also commonly used as industrial strength degreasers), PMMA boxes must be chemically welded together by a solvent at room temperature to keep the liquid environment contained. The same boxes will be created for the other liquid mediums used to measure the polar solid surface energy component. \\
+\textbf{2)} Single-crystal samples (\fegacomp where $x=19,25$) will be polished using SiC paper followed by 0.1 $\mu$m particle colloidal silica gel to achieve a mirror finish. EBSD or single-crystal XRD is used to find surface orientation. After the main sample surface orientation is discovered, the sample can be cut using wire cut electric discharge machining to obtain \hkl(001), \hkl(110), and \hkl(111) facets. Each sample is then polished again for EBSD measurement and surface energy measurement. As soon as polished samples have reached a mirror-finish, they will be immersed in the \nalk environment. \\ 
+\textbf{3)} Samples will be mounted with the surface perpendicular to the dispensing needle and the two-liquid-phase method will be administered. This first experiment will attempt to measure a \ca on the polished Galfenol samples, but the probe water will likely spread over the surface very quickly to achieve complete wetting. Advancing and receding \ca[s] will be measured to find the contact angle hysteresis (CAH), as well as the drop volume of respective angles. An option for recording CAH on our polished surfaces is a high speed camera that to capture the wetting line spreading and receding . Coupled with the telescopic lens on the Kruss goniometer provided by UMD's Civil \& Environmental Engineering we can use a high speed CCD camera to capture such images. From the advancing and receding \ca[s], a proper averaging can be used to estimate the most stable contact angle, as seen in Equation \ref{avg_cah}.\cite{Andrieu1994} The most stable contact angle has also been measured by simply vibrating the system for ~15 s.\cite{Meiron2004} An averaging of advancing and receding \ca[s] is reasonable considering the practical advancing and receding \ca[s] are metastable states on opposite sides of a Gibbs energy vs. contact angle plot, seen in Figure \ref{fig:gibbs_ca}.
 \begin{equation}
 	\label{avg_cah}	
 	\cos\theta_{ms} = (\cos\theta_{a} + \cos\theta_{r})/2 
 \end{equation}
-The drop volumes of advancing and receding \ca[s] will give us a range of volumes for static \ca measurements on the same surfaces, which are also expected to totally wet our flat surfaces, but will be measured for posterity.
-
-\begin{figure}[h]
+\begin{wrapfigure}[16]{r}{0.45\linewidth}
 	\centering
-	\includegraphics[width=0.5\linewidth]{gibbs_ca}
+	\includegraphics[width=\linewidth,trim={0 0 0 1cm}]{gibbs_ca}
 	\caption{The curve of Gibbs energy versus geometric contact angle for a two-dimensional drop on a heterogeneous solid surface. Each minimum represents a metastable equilibrium state. The lowest of all minima indicates the most stable state. In between every pair of equilibrium states there exists an energy barrier. Abbreviations used: PADCA, practical advancing contact angle; PRCA, practical receding contact angle; TADCA, theoretical advancing contact angle; TRCA, theoretical receding contact angle.\cite{Marmur2009b}}
 	\label{fig:gibbs_ca}
-\end{figure}
-
-\1 We plan to work with UMD's FabLab to determine the best protocol for creating a patterned surface on Fe-Ga samples. Patterning will occur on the mirror-finish samples made in Step 2 to ensure the flattest possible pillars. Once we have nicely patterned surfaces, we will execute the same two-liquid-phase method procedure desribed in Step 3. We expect much greater contact angles for every surface based on the controlled roughness, and we also expect dramatic differences in the calculated solid surface energies for the \hkl(100), \hkl(110), and \hkl(111) Fe-Ga surfaces using Equation \ref{gamS}. These surface energy values should be similar to the $\alpha$-iron DFT calculations of $\gamma_{100}$ = 2.6660 J/m$^2$, $\gamma_{110}$ = 2.0535 J/m$^2$, and $\gamma_{111}$ = 2.5271 J/m$^2$.\cite{Wang2000} While we are testing single-crystal samples of two different compositions (\fegacomp where $x=19,25$), we are unclear of how the surface energy of Fe-Ga will change with composition. We have asked our collaborator, Dr. Ruqian Wu, to use computer simulations to try and find such a change in surface energy with composition, which we will compare with upon experimentally determining these values. 
+\end{wrapfigure}
+The drop volumes of advancing and receding \ca[s] will give us a range of volumes for static \ca measurements on the same surfaces, which are also expected to totally wet our flat surfaces, but will be measured for posterity.\\
+\textbf{4)} We plan to work with UMD's FabLab to determine the best protocol for creating a patterned surface on Fe-Ga samples. Patterning will occur on the mirror-finish samples made in Step 2 to ensure the flattest possible pillars. Once we have nicely patterned surfaces, we will execute the same two-liquid-phase method procedure desribed in Step 3. We expect much greater contact angles for every surface based on the controlled roughness, and we also expect dramatic differences in the calculated solid surface energies for the \hkl(100), \hkl(110), and \hkl(111) Fe-Ga surfaces using Equation \ref{gamS}. These surface energy values should be similar to the $\alpha$-iron DFT calculations of $\gamma_{100}$ = 2.6660 J/m$^2$, $\gamma_{110}$ = 2.0535 J/m$^2$, and $\gamma_{111}$ = 2.5271 J/m$^2$.\cite{Wang2000} While we are testing single-crystal samples of two different compositions (\fegacomp where $x=19,25$), we are unclear of how the surface energy of Fe-Ga will change with composition. We have asked our collaborator, Dr. Ruqian Wu, to use computer simulations to try and find such a change in surface energy with composition, which we will compare with upon experimentally determining these values. 
 %Pattern surfaces with transparency paper $\gtrsim$40 $\mu$m since this is the lower limit of transparency paper. 
 
 
@@ -164,7 +126,7 @@ The drop volumes of advancing and receding \ca[s] will give us a range of volume
 %	\2 \textbf{Is there a difference from one patterned orientation to another?} This will show if the patterning (induced roughness) will have a large impact on the CA and, as a result, \underline{Surface Energy}. 
 %		\3 If we have a defined roughness for {100}, {110}, and {111} samples, and the apparent \ca[s] do not change with orientation, the geometry of the roughness dictates the \ca. 
 %		\3 If the \ca[s] do change with orientation, the surface orientation determines the \ca, and surface energy can be confidently measured.
-\end{outline}
+%\end{outline}
 
 Pending the success of this proposed research, our group will incorporate these experimentally determined orientation-dependent surface energies into to our AGG model to elucidate the driving forces of grain growth methods in Galfenol. We would like to expand this experiment to single-crystal Alfenol samples as well as many other pure and alloyed metals. Metal surface energies are extremely elusive values due to their complexities and lack of consistent experimental confirmation. This work hopes to contribute to the vast body of work on experimental wetting dynamics and surface energy determination for the benefit research in the near future. It is our intention to explore bold and innovative research to push the boundaries of understanding.
 

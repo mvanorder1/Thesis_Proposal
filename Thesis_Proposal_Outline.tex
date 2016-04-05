@@ -11,11 +11,11 @@
 \usepackage{lipsum}% dummy text
 \usepackage{multicol}
 \usepackage{setspace}
-\usepackage{cite}
+\usepackage[superscript,biblabel]{cite}
 \usepackage{graphicx}
 \graphicspath{ {Images/} }
 \usepackage{wrapfig}
-\usepackage[font={small}]{caption}
+\usepackage[font={small,it}]{caption}
 \usepackage{framed}
 \usepackage{miller}
 \usepackage{hyperref}
@@ -37,11 +37,21 @@
 \usepackage{amsmath}	%general puprose math package
 \usepackage{mathtools}	%separate math equation generator from amsmath; used to make square brackets under equations
 \usepackage{array} 		%creates tables
+	\newcolumntype{L}{>{\centering\arraybackslash}m{3.3cm}}
+
 \usepackage{bm}			%allows bolding of equations IN equation environment
 \usepackage{color}		%for making colored text
 \usepackage{caption,subcaption}	%captions and subcaptions
 
-%\usepackage{tcolorbox}	%for making colored boxes around equations
+\usepackage{multicol}
+\usepackage{etoolbox}
+\usepackage{relsize}
+\patchcmd{\thebibliography}
+{\list}
+{\begin{multicols}{2}\smaller\list}
+	{}
+	{}
+	\appto{\endthebibliography}{\end{multicols}}
 
 
 %Defines shortcuts for frequently used equations
@@ -58,7 +68,7 @@
 
 
 \title{\textbf{Orientation-dependent Surface Energy Characterization of Rare-Earth-Free Magnetostrictive Alloys}}
-\author{\makebox[.9\textwidth]{\textbf{Michael N. Van Order}\thanks{Funded by the NSF}}\\~\\
+\author{\makebox[.9\textwidth]{\textbf{Michael N. Van Order}\thanks{Funded by the \NSF SUSCHEM - Collaborative Research program (grant number: DMR-1310447)}}\\~\\
 	%		Materials Science and Engineering\\
 	%		University of Maryland
 	\and Dr. Alison Flatau\\
@@ -68,7 +78,7 @@
 	%		Aerospace Engineering\\
 	%		University of Maryland
 }
-\date{March 2016}
+\date{April 2016}
 
 %\usepackage[
 %backend=biber,
@@ -83,6 +93,7 @@
 \begin{titlepage}
 	\clearpage 
 	\maketitle
+	
 	\thispagestyle{empty}
 \end{titlepage}
 
@@ -104,11 +115,17 @@
 \section{Proposed Research}\label{section3}
 \input{Subfiles/3_proposed_research}
 
+\newpage
+\appendix
+\section{Derivation of Young's Equation}
+\input{Subfiles/4_appendixA_young_deriv}
 
+\section{Derivation of Schultz's two-liquid-phase method}\label{appendixB}
+\input{Subfiles/4_appendixB_schultz_deriv}
 
-
-%\printbibliography
-\bibliographystyle{IEEEtran}
+\newpage
+\bibliographystyle{unsrt}
 \bibliography{BibTeX/library}
+
 
 \end{document}

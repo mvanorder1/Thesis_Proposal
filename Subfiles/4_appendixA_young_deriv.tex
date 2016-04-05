@@ -1,0 +1,31 @@
+
+Derivation of Young's Equation\\
+Assuming an ideally flat surface
+\begin{equation} \label{dropvol}
+V_{drop} = \frac{\pi R^{3}}{3} (1-\cos\theta)^{2} (2+\cos\theta)
+\end{equation}
+\begin{equation} \label{liqvapSA}
+S_{LV} = 2\pi R^{2} (1-\cos\theta)
+\end{equation}
+
+Where $S_{LV}$ is the surface area of the droplet liquid-vapor interface. The Gibbs free energy of a droplet is depicted in Equation \ref{gibbsdroplet}.
+
+\begin{equation} \label{gibbsdroplet}
+G = \gamma_{LV} S_{LV} + \pi(R \sin\theta)^{2} \underbracket{(\gamma_{SL}-\gamma_{SV})}_{\text{\normalsize{$a$}}}\\
+\end{equation}
+
+where \gamLV, \gamSL, and \gamSV are the liquid-vapor, solid-liquid, and solid-vapor interaction energies, respectively. Let $a = \gamma_{SL}-\gamma_{SV}$. 
+
+Assuming the the volume of the droplet remains constant:
+\begin{equation*}
+	\begin{gathered}
+		G = \left[\frac{9\pi V^{2}}{(1-\cos\theta)(2+\cos\theta)^{2}}\right]^{2/3}
+		\left[2\gamma_{LV} - a(1+\cos\theta)\right]\\
+		\frac{dG}{d\theta} = \left[\frac{9\pi V^{2}}{(1-\cos\theta)^{4}(2+\cos\theta)^{5}}\right]^{1/3}
+		2\left[a-\gamma_{LV}\cos\theta)\right]\sin\theta\\ \\
+		\begin{split}
+			\left[\frac{dG}{d\theta}\right]_{\theta=\theta_{eq}}&=0=a-\gamma_{LV}\cos\theta\\
+			\therefore a 	&= \gamma_{LV}\cos\theta\\
+		\end{split}					
+	\end{gathered}
+\end{equation*}

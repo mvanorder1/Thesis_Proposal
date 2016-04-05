@@ -1,0 +1,34 @@
+\subsection{Measuring dispersive solid surface energy, $\gamma_{S}^{D}$}
+	
+Assuming Young's equation (Equation \ref{young_eqn}) can be applied to a liquid-liquid(bulk phase)-solid ($L_{1}-L_{2}-S$) system, we have the relationship:
+\begin{equation}
+\label{youngs}
+	\gamma_{SL_{2}} = \gamma_{L_{1}L_{2}}\cos\theta_{SL_{1}} + \gamma_{SL_{1}}
+\end{equation}
+
+In this way, \gamSV, which is the driving force of spreading the one-liquid-phase method that causes complete wetting on high-surface energy metal surfaces, is replaced by $ \gamma_{SL_{2}} $, where $\gamma_{SL_{2}} <$ \gamSV. Hence, the contact angle in this system is measurable. According to Fowkes\cite{Fowkes1964}, $\gamma_{SL_{1}}$ and $\gamma_{SL_{2}}$ are given by:
+\begin{equation} 
+\label{gSL1}
+	\gamma_{SL_{1}} = \gamma_{S} + \gamma_{L_{1}} - 2(\gamma_{S}^{D}\gamma_{L_{1}}^{D}) - I_{SL_{1}}^{P}
+\end{equation}
+\begin{equation}
+\label{gSL2}
+	\gamma_{SL_{2}} = \gamma_{S} + \gamma_{L_{2}} - 2(\gamma_{S}^{D}\gamma_{L_{2}}^{D}) - I_{SL_{2}}^{P}
+\end{equation} 
+where $\gamma$ and $\gamma^{D}$ are the surface energy and its dispersive component, respectively, and $I_{SL_{1}}^{P}$ is a specific (nondispersive) interaction term that encompasses all interactions between the solid and the liquid (dipole-dipole, dipole-induced dipole, hydrogen bonds, $\pi$ bonds,...) except London dispersion interactions.
+
+%TODO Define and understand dispersive vs. polar components of surface energy.
+%TODO Define and understand London dispersion forces
+Substituting Equations \ref{gSL1} and \ref{gSL2} into \ref{youngs}:
+
+\begin{equation} 
+\label{schultz1}
+	\gamma_{SL_{1}}-\gamma_{SL_{2}}+\gamma_{L_{1}L_{2}}\cos\theta_{SL_{1}} = 2(\gamma_{S}^{D})^{1/2}  [(\gamma_{L_{1}}^{D})^{1/2}-(\gamma_{L_{2}}^{D})^{1/2}] + I_{SL_{1}}^{P} - I_{SL_{2}}^{P}
+\end{equation}
+
+We will be using $L_{1}$ as water, $L_{2}$ as \nalk[s], and $I_{SL_{2}}^{P}$ may be considered equal to zero because the surface free energy of \nalk[s] only consists of the London dispersion term. This is because \nalk[s] only contain C-C and C-H atoms connected by $\sigma$-bonds, with a generic formula of C$_{n}$H$_{2n+2}$. C and H have very similar electronegativities of $\chi_{C}=2.55$ and $\chi_{H}=2.20$, respectively. This shows that all bonds in \nalk[s] are non-polar, hence there are no polar interactions in \nalk[s]. Our final equation is now:
+
+\begin{equation} 
+\label{schultz2}
+	\gamma_{W}-\gamma_{H}+\gamma_{WH}\cos\theta_{W} = 2(\gamma_{S}^{D})^{1/2}  [(\gamma_{W}^{D})^{1/2}-(\gamma_{H}^{D})^{1/2}] + I_{SW}^{P} 
+\end{equation} 
