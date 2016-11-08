@@ -36,16 +36,21 @@
 \usepackage{enumitem}	%allows for numbering/listing options for outlines
 \usepackage{amsmath}	%general puprose math package
 \usepackage{mathtools}	%separate math equation generator from amsmath; used to make square brackets under equations
-\usepackage{array} 		%creates tables
+\usepackage{array, booktabs} 		%creates tables
 	\newcolumntype{L}{>{\centering\arraybackslash}m{3.3cm}}
 
 \usepackage{bm}			%allows bolding of equations IN equation environment
 \usepackage{color}		%for making colored text
 \usepackage{caption,subcaption}	%captions and subcaptions
+%\DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
+\usepackage[x11names]{xcolor}
+\usepackage{colortbl}
 
 \usepackage{multicol}
 \usepackage{etoolbox}
 \usepackage{relsize}
+
+
 \patchcmd{\thebibliography}
 {\list}
 {\begin{multicols}{2}\smaller\list}
@@ -67,6 +72,7 @@
 \newcommand{\etal}{\textit{et al}. }
 \newcommand{\ie}{\textit{i}.\textit{e}., }
 \newcommand{\eg}{\textit{e}.\textit{g}. }
+\newcommand{\foo}{\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
 
 
 \title{\textbf{Orientation-dependent Surface Energy Characterization of Rare-Earth-Free Magnetostrictive Alloys}}
@@ -109,8 +115,9 @@
 
 \input{Subfiles/1_Background-Motivations}
 
-
+\newpage
 \section{Metal Surface Energy Measurement}\label{section2}
+
 \input{Subfiles/2_completed_research}
 
 
@@ -119,7 +126,7 @@
 
 \newpage
 \appendix
-\section{Derivation of Young's Equation}
+\section{Derivation of Young's Equation}\label{appendixA}
 \input{Subfiles/4_appendixA_young_deriv}
 
 \section{Derivation of Schultz's two-liquid-phase method}\label{appendixB}
